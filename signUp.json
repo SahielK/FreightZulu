@@ -1,0 +1,41 @@
+
+{
+  "getNdelete": {
+    "dataSources": [
+      {
+        "tableName": "MST_FZULU_LOGIN",
+        "responseFieldName": "signUp",
+        "fieldsRequired": "ACCOUNT_CODE,EMAIL,PWD",
+        "uniqueAccIdentifier": "ACCOUNT_CODE",
+        "uniqueRowIdentifier": "ACCOUNT_CODE"
+      }
+  
+     
+    ]
+  },
+  "createNupdate": {
+    "fieldNames": [
+      {
+        "responseFieldName": "signUp",
+        "tableName": "MST_FZULU_LOGIN",
+        "fieldsRequired": {
+          
+         "account_code"     :"number", 
+         "email"           :"string",
+         "pwd"        :"string",
+        "account_type" : "string",
+        "validation":"string"
+         
+        },
+  
+        "uniqueRowIdentifier": "account_code",
+        "uniqueAccIdentifier": "account_code"
+      }
+  
+     
+      
+    ]
+  }
+}
+
+

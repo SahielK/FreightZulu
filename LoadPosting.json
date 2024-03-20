@@ -1,0 +1,115 @@
+
+{
+    "getNdelete": {
+      "dataSources": [
+        {
+          "tableName": "TRANS_LOAD_POSTING_HDR",
+          "responseFieldName": "postingheader",
+          "fieldsRequired": "LOAD_ID,LOAD_DATE,TYPE_CODE,LOAD_CODE,LOADING_DATE,LOADING_TIME,UNLOADING_DATE,UNLOADING_TIME,ACCOUNT_CODE,BROKER_NAME,LOAD_WT, LOAD_LENGTH,LOAD_WIDTH,LOAD_HEIGHT, HAZMAT,LTGR__CODE,UN_TGR_CODE,LAR_CODE,UN_AR_CODE,INSURANCE,PREFERRED_ROUTE,CLOSING_TIME,PAYMENT_TERM_CD,SHIPPER_REQ_CD,CARRIER_REQ_CD,INSURANCE_AMT,ORIGIN_ADDRESS,ORIGIN_STATE_CD,ORIGIN_STATE_CD,ORIGIN_CITY_CD,ORIGIN_ZIP_CD,DES_ADDRESS,DES_STATE_CD,DES_CITY_CD,DES_ZIP_CD,REMARKS,DISTANCE,LOAD_AMOUNT,ENTITY_TYPE,UOM_CODE,END_DATE,END_TIME,TIM_FM,GEN",
+          "uniqueAccIdentifier": "LOAD_ID",
+          "uniqueRowIdentifier": "LOAD_ID"
+        }
+    
+       
+      ]
+    },
+    "createNupdate": {
+      "fieldNames": [
+        {
+          "responseFieldName": "postingheader",
+          "tableName": "TRANS_LOAD_POSTING_HDR",
+
+          "fieldsRequired": {
+            
+            "account_code": "number",
+            "load_id": "number",
+            "load_date": "date",
+            "type_code": "number",
+            "load_code": "number",
+            "loading_date": "date",
+            "loading_time": "string",
+            "unloading_date": "date",
+            "unloading_time": "string",           
+            "broker_name": "string",
+            "load_wt": "number",
+            "load_length": "number",
+            "load_width": "number",
+            "load_height": "number",
+            "hazmat": "string",
+            "ltgr__code": "string",
+            "un_tgr_code": "string",
+            "lar_code": "string",
+            "un_ar_code": "string",
+            "insurance": "string",
+            "preferred_route": "string",
+            "closing_time": "string",
+            "payment_term_cd": "number",
+            "shipper_req_cd": "number",
+            "carrier_req_cd": "number",
+            "insurance_amt": "number",
+            "origin_address": "string",
+            "origin_state_cd": "string",
+            "origin_city_cd": "string",
+            "origin_zip_cd": "string",
+            "des_address": "string",
+            "des_state_cd": "string",
+            "des_city_cd": "string",
+            "des_zip_cd": "string",
+            "remarks": "string",
+            "distance": "string",
+            "load_amount": "number",
+            "entity_type": "string",
+            "uom_code": "number",
+            "end_date": "date",
+            "end_time": "string",
+            "tim_fm": "string",
+            "bidding_end_time": "datetime"
+          },
+          
+          "lovFields": {
+            "TYPE_CODE": {
+              "masterName": "mst_vechile_type",
+              "columnsRequired":  "type_code, type_name"
+            }
+          },
+         
+          "uniqueRowIdentifier": "LOAD_ID",
+          "uniqueLoadIdentifier": "LOAD_ID"
+        },
+        {
+          "responseFieldName": "itemSize",
+          "tableName": "TRANS_LOAD_POSTING_DET",
+          "typeArray": true,
+          "fieldsRequired": {
+            
+            "item_name": "string",
+            "uom_code": "number",
+            "size_id":"number",
+            "length": "number",
+            "width": "number",
+            "height": "number",
+            "load_wt": "number"
+            
+           
+           },
+           "lovFields": {
+            "UOM_CODE": {
+              "masterName": "sl_mst_uom",
+              "columnsRequired":  "uom_code, uom"
+            },
+            "SIZE_ID": {
+              "masterName": "mst_size_uom",
+              "columnsRequired":  "size_id, size_name"
+            }
+           },
+          "uniqueRowIdentifier": "uniq_code",
+          "uniqueLoadIdentifier": "load_id"
+        }
+    
+       
+        
+      ]
+    }
+  }
+  
+

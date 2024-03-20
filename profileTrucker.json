@@ -1,0 +1,97 @@
+{
+  "getNdelete": {
+    "dataSources": [
+      {
+        "tableName": "MST_FZULU_LOGIN",
+        "responseFieldName": "profile",
+        "fieldsRequired": "account_code, account_name, account_type, Company_add, address, contact_name, city_code, pin_code, pan_no, company_tax_no, email, marked, company_registration_no, service_tax_code, state_code, pwd, last_name, carrier_code, frequency_code, load_volume, destination_type_cd, commodity_type_cd, vechile_type_cd, volume_shipment, frequency_shipment, payment_term_cd",
+        "uniqueAccIdentifier": "ACCOUNT_CODE",
+        "uniqueRowIdentifier": "ACCOUNT_CODE"
+      }
+    ]
+  },
+  "createNupdate": {
+    "fieldNames": [
+      {
+        "responseFieldName": "profile",
+        "tableName": "MST_FZULU_LOGIN",
+        "fieldsRequired": {
+          "account_code": "number",
+          "account_name": "string",
+          "account_type": "string",
+          "company_add": "string",
+          "address": "string",
+          "contact_name": "string",
+          "city_code": "string",
+          "pin_code": "string",
+          "company_tax_no": "string",
+          "email": "string",
+          "marked": "string",
+          "company_registration_no": "string",
+          "state_code": "string",
+          "company_size": "number",
+          "industry_type_cd": "string",
+          "annual_revenue": "number",
+          "carrier_rating_cd": "number",
+          "vichel_type_cd": "number",
+          "age_of_mc": "number",
+          "currency_id": "number",
+          "size_id": "number",
+          "load_type_cd": "number",
+          "country_code": "string",
+          "p_state_code": "string",
+          "p_city_code": "string",
+          "p_zip_code": "number",
+          "start_date": "date",
+          "start_time": "number",
+          "start_location": "string",
+          "drive_hours": "number",
+          "end_date": "date",
+          "end_time": "string",
+          "end_location": "string"
+        },
+        "lovFields": {
+          "COUNTRY_CODE": {
+            "masterName": "sl_mst_country",
+            "columnsRequired":  "country_code, country_name"
+          }
+         }
+      },
+      
+      {
+        "responseFieldName": "truckdetails",
+        "tableName": "mst_truck_detail",
+        "typeArray": true,
+
+        "fieldsRequired": {
+        "license_number": "string",
+        "model": "string",
+        "vin": "string",
+        "engine_number": "string",
+        "load_type_cd": "number",
+        "mc_number": "string",
+        "capacity": "number",
+        "availibility_status": "number",
+        "commodity_type_cd": "number",
+        "vehicle_type_cd": "number",
+        "fuel_efficiency": "number",
+        "insurance_amount": "number",
+        "gps_information": "string",
+        "maintanence_record": "number",
+        "currency_id": "number",
+        "size_id": "number"
+        }
+       
+      },
+      {
+        "uniqueRowIdentifier": "account_code",
+        "uniqueAccIdentifier": "account_code"
+      }
+    ]
+  }
+}
+
+
+
+
+

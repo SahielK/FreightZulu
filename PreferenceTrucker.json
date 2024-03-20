@@ -1,0 +1,11 @@
+{
+    "myPreference": {
+      "fields": [
+        {
+          "tableName": "mst_trucker_preference",
+          "fields": " start_location, end_location,start_details,end_details, country_code, account_id "
+        }
+      ]
+    }
+  }
+  

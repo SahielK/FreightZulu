@@ -1,0 +1,61 @@
+
+{
+  "getNdelete": {
+    "dataSources": [
+      {
+        "tableName": "MST_FZULU_LOGIN",
+        "responseFieldName": "profile",
+        "fieldsRequired": "account_code, account_name, account_type, Company_add, address, contact_name, city_code, pin_code, pan_no, company_tax_no, email, marked, company_registration_no, service_tax_code, state_code, pwd, last_name, carrier_code, frequency_code, load_volume, destination_type_cd, commodity_type_cd, vechile_type_cd, volume_shipment, frequency_shipment, payment_term_cd",
+        "uniqueAccIdentifier": "ACCOUNT_CODE",
+        "uniqueRowIdentifier": "ACCOUNT_CODE"
+      }
+  
+     
+    ]
+  },
+  "createNupdate": {
+    "fieldNames": [
+      {
+        "responseFieldName": "profile",
+        "tableName": "MST_FZULU_LOGIN",
+        "fieldsRequired": {
+          
+          "account_code"      :"number", 
+          "account_name"      :"string" ,
+          "account_type"      :"string",
+          "company_add"      :"string",
+          "address"		    :"string",
+          "contact_name"      :"string",
+          "city_code"		    :"string",
+          "pin_code"	        :"string",
+          "company_tax_no"    :"string",
+          "email"             :"string",
+          "marked"		    :"string",		
+          "company_registration_no":"string",
+          "state_code"	:"string",
+          "company_size":  "number",
+          "industry_type_cd" :"string",
+          "annual_revenue":"number",
+          "carrier_rating_cd":"number",
+          "vechile_type_cd":"number",
+          "age_of_mc":"number",
+          "start_location":"string",
+          "end_location":"string",
+          "load_type_cd":"number",
+          "size_id":"number",
+          "currency_id":"number"
+        
+         
+        },
+  
+        "uniqueRowIdentifier": "account_code",
+        "uniqueAccIdentifier": "account_code"
+      }
+  
+     
+      
+    ]
+  }
+}
+
+
