@@ -7,3 +7,4 @@ router.get("/getPaymentDetails", amount.GetPayInfo);
 router.get("/getPaypal", amount.PaypalAmount);
 
 module.exports = router;
+// updated on 26-7-2024
