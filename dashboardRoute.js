@@ -16,6 +16,7 @@ router.get("/Myloads", dashboardloads.Myloads);
 router.get("/MyAll-Loads", dashboardloads.MyAllLoads);
 
 router.get("/dashamountTrucker", dashboardloads.carddetail);
+//router.get("/dashamountadnm", dashboardloads.carddetail);
 
 
 
