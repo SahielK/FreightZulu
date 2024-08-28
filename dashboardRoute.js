@@ -27,3 +27,4 @@ router.get("/earning", dashboardloads.truckerEarningMobile)
 router.post("/:id/:CheckValue/:StsTime", dashboardloads.MydataForStatusTime);
 router.get("/notify", dashboardloads.Notify);
 module.exports = router;
+//New Mobile
