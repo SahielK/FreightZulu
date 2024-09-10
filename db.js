@@ -14,5 +14,5 @@ const client=new Client({
 //client.connect();
 
 
-//connecting to data
+//connecting to database
 module.exports=client
