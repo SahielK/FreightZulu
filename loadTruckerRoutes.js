@@ -14,7 +14,7 @@ router.route("/load-view").get(loadController.AllLoads);
 router.route("/additional-data").get(loadController.getAdditionalData);
 router.route("/load-data").get(loadController.AllViewBids);
 router.route("/create-bid").post(loadController.createBid);
-// router.route("/update-lowest-bid-status").post(loadController.selectBid);
+// added router.route("/update-lowest-bid-status").post(loadController.selectBid);
 
 router
   .route("/:id")
