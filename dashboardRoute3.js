@@ -5,7 +5,7 @@ const dashboardloads = require("../controllers/dashboardController");
 const router = express.Router();
 
 
-// 1st
+// 1st route
 router.get("/loads", dashboardloads.MyloadsForDashboard);
 // 2nd
 router.get("/tobid", dashboardloads.Mytobid);
