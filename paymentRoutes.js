@@ -4,7 +4,7 @@ const paymentController = require('../controllers/paymentController');
 const router = express.Router();
 
 
-// router.get('/get-preference', profileController.getPreference);
+// df router.get('/get-preference', profileController.getPreference);
 
 router.get('/getPaymentDetails', paymentController.GetPayInfo)
 
